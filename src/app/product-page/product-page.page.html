@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/catalog"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ product?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="product">
+  <div class="product-image-box">
+    <img [src]="product.image" [alt]="product.name" />
+  </div>
+  <h2>{{ product.name }}</h2>
+  <p class="price">₱{{ product.price }}</p>
+  <p class="description">{{ product.description }}</p>
+</ion-content>
